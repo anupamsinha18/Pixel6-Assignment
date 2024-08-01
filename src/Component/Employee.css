@@ -1,0 +1,119 @@
+body{
+  font-family: Arial, sans-serif;
+}
+table {
+  width: 100%;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px 12px;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: #f1f1f1;
+}
+
+th.sort-asc::after {
+  content: ' ▲';
+}
+
+th.sort-desc::after {
+  content: ' ▼';
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.header{
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  justify-content: space-between;
+}
+.filters select, .filters input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 0 4px;
+  border: 1px solid #ddd;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.pagination button:hover {
+  background-color: #ddd;
+}
+.userimage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      align-items: center;
+
+  }
+  .filters select, .filters input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+  }
+  .filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+      width: 100%;
+  }
+
+  table {
+      font-size: 14px;
+  }
+
+  th, td {
+      padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+      font-size: 20px;
+  }
+
+  table {
+      font-size: 12px;
+  }
+
+  th, td {
+      padding: 4px;
+  }
+}
